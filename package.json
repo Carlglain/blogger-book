@@ -4,10 +4,11 @@
   "description": "this is a server side project to continue my backend lessons",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "dev":"nodemon index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

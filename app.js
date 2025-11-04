@@ -1,8 +1,9 @@
 import express, { urlencoded } from "express";
+import cors from "cors";
 const app = express();
 
 app.use(
-  json({
+  express.json({
     limit: "16kb",
   })
 );
