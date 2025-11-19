@@ -1,5 +1,6 @@
-import express, { urlencoded } from "express";
-import cors from "cors";
+const express = require("express");
+const urlencoded = require("express").urlencoded;
+const cors = require("cors");
 const app = express();
 
 app.use(
@@ -20,4 +21,4 @@ app.use(
 );
 app.use(express.static("public"));
 
-export { app };
+module.exports = app;
