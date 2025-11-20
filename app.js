@@ -1,6 +1,6 @@
 const express = require("express");
-const urlencoded = require("express").urlencoded;
 const cors = require("cors");
+
 const app = express();
 
 app.use(
@@ -8,17 +8,21 @@ app.use(
     limit: "16kb",
   })
 );
+
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true,
   })
 );
+
 app.use(
-  urlencoded({
+  express.urlencoded({
     limit: "16kb",
+    extended: true,
   })
 );
+
 app.use(express.static("public"));
 
 module.exports = app;
