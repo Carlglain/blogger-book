@@ -22,7 +22,9 @@ app.use(
     extended: true,
   })
 );
-
 app.use(express.static("public"));
 
+//Routes
+const postsRoute = require("./routes/Posts.js");
+app.use("/posts", postsRoute);
 module.exports = app;
