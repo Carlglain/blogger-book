@@ -1,6 +1,7 @@
 const { Posts } = require("../models");
-const allPosts = (req, res) => {
-  res.send("Helloworld!");
+const allPosts = async (req, res) => {
+  const listOfPosts = await Posts.findAll();
+  res.json(listOfPosts);
 };
 const createPost = async (req, res) => {
   const post = req.body;
