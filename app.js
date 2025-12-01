@@ -26,5 +26,8 @@ app.use(express.static("public"));
 
 //Routes
 const postsRoute = require("./routes/Posts.js");
+const commentRoute = require("./routes/Comments.js");
+
 app.use("/posts", postsRoute);
+app.use("/comment", commentRoute);
 module.exports = app;
