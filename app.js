@@ -29,5 +29,5 @@ const postsRoute = require("./routes/Posts.js");
 const commentRoute = require("./routes/Comments.js");
 
 app.use("/posts", postsRoute);
-app.use("/comment", commentRoute);
+app.use("/comments", commentRoute);
 module.exports = app;

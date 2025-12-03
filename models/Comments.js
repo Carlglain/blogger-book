@@ -4,10 +4,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
   });
+  Comments.associate = (models) => {
+    Comments.belongsTo(models.Posts, {
+      foreignKey: "PostId",
+    });
+  };
+
   return Comments;
 };
